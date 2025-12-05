@@ -8,7 +8,7 @@ console.log(containsChar("Hello", "H"));
 //Задание 2
 
 const reverse = (str) => {
-    str.split('').reverse().join('');
+    return str.split('').reverse().join('');
 }
 
 console.log(reverse("hello"));
@@ -16,7 +16,7 @@ console.log(reverse("hello"));
 //Задание 3
 
 const wordsToRegister = (str) => {
-    
+    let result = "";
     for (let i = 0; i < str.length; i++) {
         if (i % 2 === 0) {
             result += str[i].toLowerCase();
@@ -26,6 +26,8 @@ const wordsToRegister = (str) => {
     }
     return result;
 }
+
+console.log(wordsToRegister("HiWorld"));
 
 //Задание 4
 
@@ -40,12 +42,16 @@ const sumOfDigitsInString = (str) => {
     return sum;
 };
 
+console.log(sumOfDigitsInString("a1b2c3"));
+
 //Задание 5
 
-const checkChars = (str, what, onWhat) =>{
-    if (!str.includes(what)) {
+const checkChars = (str, targetChar, onWhat) =>{
+    if (!str.includes(targetChar)) {
         return 'Error';
     }
 
-    return str.replace(what, onWhat);
+    return str.replace(targetChar, onWhat);
 }
+
+console.log(checkChars("banan", "a", "*"));
